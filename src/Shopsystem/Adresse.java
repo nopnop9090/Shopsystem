@@ -10,7 +10,7 @@ public class Adresse {
 	public Adresse(String strasse, String plz, String ort) {
 		super();
 		this.strasse = strasse;
-		this.plz = plzl;
+		this.plz = plz;
 		this.ort = ort;
 	}
 
