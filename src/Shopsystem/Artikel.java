@@ -21,7 +21,7 @@ public class Artikel {
 		this.aktuellerBestand = aktuellerBestand;
 	}
 
-	// getter/setter
+	// getter / (setter)
 	public String getName() {
 		return name;
 	}
@@ -37,8 +37,5 @@ public class Artikel {
 	public int getAktuellerBestand() {
 		return aktuellerBestand;
 	}
-	
-	
-	
 	
 }

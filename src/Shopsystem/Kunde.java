@@ -94,4 +94,12 @@ public class Kunde {
 	public void setKreditkarte(Kreditkarte kreditkarte) {
 		this.kreditkarte = kreditkarte;
 	}		
+	
+	public Adresse getAdresse() {
+		return adresse;
+	}
+	
+	public void setAdresse(Adresse adresse) {
+		this.adresse = adresse;
+	}
 }
