@@ -105,6 +105,13 @@ public class Elemente {
 				// text des ausgewaehlten eintrags
 				String comboText = box.getSelectedItem().toString();
 				System.out.println(comboText);
+			
+				String radio = rb1.isSelected() ? "AWE" : "FiSi";
+				System.out.println(radio);
+				
+				label.setText("Ich verändere mich nach Klick");
+				
+				// fehlende JList kommt beim nächsten mal :)
 			}
 			
 		});
