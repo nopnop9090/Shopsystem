@@ -27,13 +27,14 @@ public class Flow {
 		JButton b6=new JButton("Button 6");
 		JButton b7=new JButton("Button 7");
 
+		// reihenfolge des hinzufuegens beachten
 		panel.add(b1);
+		panel.add(b7);	// button 7 
 		panel.add(b2);
 		panel.add(b3);
 		panel.add(b4);
 		panel.add(b5);
 		panel.add(b6);
-		panel.add(b7);
 		
 		frame.add(panel);
 		frame.setSize(500,500);
