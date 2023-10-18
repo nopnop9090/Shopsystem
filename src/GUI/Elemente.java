@@ -36,6 +36,10 @@ public class Elemente {
 		JTextField text = new JTextField();
 		text.setBounds(20, 140, 200, 50);
 		
+		// Passwort
+		JPasswordField geheim = new JPasswordField();
+		geheim.setBounds(20, 200, 200, 50);
+		
 		// JTextArea
 		// JRadioButton
 		// JCheckBox
@@ -45,6 +49,7 @@ public class Elemente {
 		panel.add(button);
 		panel.add(label);
 		panel.add(text);
+		panel.add(geheim);
 		
 		// Hauptpanel dem JFrame hinzufuegen
 		fenster.add(panel);
