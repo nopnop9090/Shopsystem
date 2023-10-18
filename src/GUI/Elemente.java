@@ -1,8 +1,12 @@
 package GUI;
 
 import java.awt.DisplayMode;
+import java.awt.GraphicsConfiguration;
 import java.awt.GraphicsDevice;
 import java.awt.GraphicsEnvironment;
+import java.awt.MouseInfo;
+import java.awt.Point;
+import java.awt.Rectangle;
 
 import javax.swing.*;
 
@@ -91,7 +95,12 @@ public class Elemente {
 		//fenster.setLocationRelativeTo(null);
 		
 		// Fenster auf dem Bildschirm 0 zentrieren
-		centerFrameOnScreen(fenster, 0);
+		//centerFrameOnScreen(fenster, 0);
+		
+		
+		// Mauspfeil-Position abfragen und JFrame auf dem Monitor zentrieren der den Mauspfeil zeigt
+        Point mousePosition = MouseInfo.getPointerInfo().getLocation();
+        centerFrameOnMonitorWithMousePointer(fenster, mousePosition);
 		
 		
 		// Anzeigen des Fensters
@@ -132,6 +141,31 @@ public class Elemente {
 
 	        // Fallback: Center on the default screen (screen 0)
 	        centerFrameOnScreen(frame, 0);
+	    }
+	}
+	
+	
+	/**
+	 * Centers a JFrame on the monitor that contains the specified mouse pointer position.
+	 *
+	 * @param frame          The JFrame to be centered.
+	 * @param mousePosition  The position of the mouse pointer in screen coordinates.
+	 */
+	public static void centerFrameOnMonitorWithMousePointer(JFrame frame, Point mousePosition) {
+	    GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+	    GraphicsDevice[] screenDevices = ge.getScreenDevices();
+
+	    for (GraphicsDevice device : screenDevices) {
+	        GraphicsConfiguration config = device.getDefaultConfiguration();
+	        Rectangle bounds = config.getBounds();
+
+	        if (bounds.contains(mousePosition)) {
+	            // If the monitor contains the mouse pointer, center the frame on that monitor
+	            int x = bounds.x + (bounds.width - frame.getWidth()) / 2;
+	            int y = bounds.y + (bounds.height - frame.getHeight()) / 2;
+	            frame.setLocation(x, y);
+	            return; // Exit the loop
+	        }
 	    }
 	}
 
