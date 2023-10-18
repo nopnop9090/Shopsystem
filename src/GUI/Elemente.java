@@ -54,8 +54,11 @@ public class Elemente {
 		JList<String> liste = new JList(themen);
 		liste.setBounds(20, 530, 200, 100);
 		
-		// JRadioButton
 		// JCheckBox
+		JCheckBox checkBox = new JCheckBox("AGB akzeptiert");
+		checkBox.setBounds(250, 20, 200, 50);
+				
+		// JRadioButton
 		
 		// Elemente dem Hauptpanel hinzufuegen
 		panel.add(button);
@@ -65,6 +68,8 @@ public class Elemente {
 		panel.add(textArea);
 		panel.add(box);
 		panel.add(liste);
+		panel.add(checkBox);
+		
 		
 		// Hauptpanel dem JFrame hinzufuegen
 		fenster.add(panel);
