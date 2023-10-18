@@ -37,6 +37,13 @@ public class Flow {
 			}
 		});
 		
+		b2.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Button 2 wurde geklickt");
+			}
+		});
+		
 		
 		
 		// reihenfolge des hinzufuegens beachten
