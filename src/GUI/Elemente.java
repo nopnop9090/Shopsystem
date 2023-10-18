@@ -17,11 +17,29 @@ public class Elemente {
 		fenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		// Erzeugen weiterer Elemente
-		// JButton
-		// JTextField
-		// JLabel
-		// Elemente dem JFrame hinzufuegen
+		// JPanel -> Container -> Vergleichbar mit DIV in HTML
+		JPanel panel = new JPanel();
+
+		// Layoutmanager deaktivieren (keine automatische Positionierung von hinzugefuegten Elementen)
+		panel.setLayout(null);
 		
+		// JButton
+		JButton button = new JButton("Bitte klicken!");
+		// Position und Dimension festlegen (x, y, Breite, Hoehe)
+		button.setBounds(100, 20, 200, 200);
+		
+		// JTextField
+		// JTextArea
+		// JLabel
+		// JRadioButton
+		// JCheckBox
+		// JList
+		
+		// Elemente dem Hauptpanel hinzufuegen
+		panel.add(button);
+		
+		// Hauptpanel dem JFrame hinzufuegen
+		fenster.add(panel);
 		
 		// Breite und Hoehe fuer Fenster festlegen
 		fenster.setSize(600, 800);
