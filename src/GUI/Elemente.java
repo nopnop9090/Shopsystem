@@ -1,0 +1,77 @@
+package GUI;
+
+import java.awt.DisplayMode;
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
+
+import javax.swing.*;
+
+
+public class Elemente {
+
+	public static void main(String[] args) {
+		// Erzeugt ein Fenster
+		JFrame fenster = new JFrame("Unser Fenster");
+		
+		// Beim Schliessen des Fensters soll Programm beendet werden
+		fenster.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+		// Erzeugen weiterer Elemente
+		// JButton
+		// JTextField
+		// JLabel
+		// Elemente dem JFrame hinzufuegen
+		
+		
+		// Breite und Hoehe fuer Fenster festlegen
+		fenster.setSize(600, 800);
+
+		// Fenster auf dem Bildschirm zentrieren
+		//fenster.setLocationRelativeTo(null);
+		
+		// Fenster auf dem Bildschirm 0 zentrieren
+		centerFrameOnScreen(fenster, 0);
+		
+		
+		// Anzeigen des Fensters
+		fenster.setVisible(true);
+	}
+	
+	
+	
+	/**
+	 * This method centers a JFrame on a specific screen in a multi-monitor configuration.
+	 *
+	 * @param frame       The JFrame to be centered.
+	 * @param screenIndex The index of the target screen (0 for the first screen, 1 for the second, and so on).
+	 */
+	public static void centerFrameOnScreen(JFrame frame, int screenIndex) {
+	    // Access the graphics environment
+	    GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+
+	    // Get information about available screens
+	    GraphicsDevice[] screenDevices = ge.getScreenDevices();
+
+	    if (screenIndex >= 0 && screenIndex < screenDevices.length) {
+	        // Obtain the desired graphics device (screen)
+	        GraphicsDevice targetScreen = screenDevices[screenIndex];
+
+	        // Retrieve the display mode for the target screen
+	        DisplayMode mode = targetScreen.getDisplayMode();
+
+	        // Calculate the x and y coordinates to center the JFrame on the target screen
+	        int x = targetScreen.getDefaultConfiguration().getBounds().x + (mode.getWidth() - frame.getWidth()) / 2;
+	        int y = targetScreen.getDefaultConfiguration().getBounds().y + (mode.getHeight() - frame.getHeight()) / 2;
+
+	        // Set the position of the JFrame
+	        frame.setLocation(x, y);
+	    } else {
+	        // Handle the case where the specified screen index is out of bounds
+	        System.out.println("Screen index out of bounds: " + screenIndex);
+
+	        // Fallback: Center on the default screen (screen 0)
+	        centerFrameOnScreen(frame, 0);
+	    }
+	}
+
+}
