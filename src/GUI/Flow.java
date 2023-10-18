@@ -1,6 +1,8 @@
 package GUI;
 
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
@@ -27,6 +29,16 @@ public class Flow {
 		JButton b6=new JButton("Button 6");
 		JButton b7=new JButton("Button 7");
 
+		
+		b1.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Button 1 wurde geklickt");
+			}
+		});
+		
+		
+		
 		// reihenfolge des hinzufuegens beachten
 		panel.add(b1);
 		panel.add(b7);	// button 7 
