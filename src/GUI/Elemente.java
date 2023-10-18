@@ -44,6 +44,11 @@ public class Elemente {
 		JTextArea textArea = new JTextArea();
 		textArea.setBounds(20, 260, 200, 200);
 		
+		// JComboBox - Drop-Down-Auswahl
+		String auswahl[] = {"Käsekuchen", "Marmorkuchen", "Frankfruert Kranz", "Mettbrötchen"};
+		JComboBox<String> box = new JComboBox<>(auswahl);
+		box.setBounds(20, 470, 200, 50);
+		
 		// JRadioButton
 		// JCheckBox
 		// JList
@@ -54,6 +59,7 @@ public class Elemente {
 		panel.add(text);
 		panel.add(geheim);
 		panel.add(textArea);
+		panel.add(box);
 		
 		// Hauptpanel dem JFrame hinzufuegen
 		fenster.add(panel);
