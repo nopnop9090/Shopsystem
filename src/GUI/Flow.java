@@ -1,8 +1,12 @@
 package GUI;
 
+import java.awt.Component;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 import javax.swing.*;
 
@@ -11,6 +15,22 @@ public class Flow {
 	public static void gibAus() {
 		System.out.println("Ich wurde geklickt!");
 	}
+	
+	public static void shuffleComponents(JPanel panel) {
+        Component[] components = panel.getComponents();
+
+        List<Component> componentList = Arrays.asList(components);
+        Collections.shuffle(componentList);
+
+        panel.removeAll();
+
+        for (Component component : componentList) {
+            panel.add(component);
+        }
+
+        panel.revalidate();
+        panel.repaint();
+    }
 	
 	public static void main(String[] args) {
 		JFrame frame = new JFrame("Flowlayout");
@@ -52,6 +72,15 @@ public class Flow {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				gibAus();
+			}
+		});
+
+		
+		b4.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// alle elemente des panels in der reihenfolge durcheinanderwerfen
+				shuffleComponents((JPanel)b4.getParent());
 			}
 		});
 
