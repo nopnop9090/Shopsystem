@@ -58,7 +58,16 @@ public class Elemente {
 		JCheckBox checkBox = new JCheckBox("AGB akzeptiert");
 		checkBox.setBounds(250, 20, 200, 50);
 				
-		// JRadioButton
+		// JRadioButton / ButtonGroup
+		JRadioButton rb1 = new JRadioButton("AWE");
+		JRadioButton rb2 = new JRadioButton("FiSi");
+		rb1.setBounds(250, 80, 100, 50);
+		rb2.setBounds(360, 80, 100, 50);
+		
+		// JRadioButtons gruppieren/ zusammengehörig
+		ButtonGroup beruf = new ButtonGroup();
+		beruf.add(rb1);
+		beruf.add(rb2);
 		
 		// Elemente dem Hauptpanel hinzufuegen
 		panel.add(button);
@@ -69,7 +78,8 @@ public class Elemente {
 		panel.add(box);
 		panel.add(liste);
 		panel.add(checkBox);
-		
+		panel.add(rb1);
+		panel.add(rb2);
 		
 		// Hauptpanel dem JFrame hinzufuegen
 		fenster.add(panel);
