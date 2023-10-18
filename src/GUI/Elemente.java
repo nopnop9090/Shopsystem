@@ -49,9 +49,13 @@ public class Elemente {
 		JComboBox<String> box = new JComboBox<>(auswahl);
 		box.setBounds(20, 470, 200, 50);
 		
+		// JList - Auswahlliste
+		String[] themen = {"Java", "SQL", "IT-Rechnen", "Wiso ;-)"};
+		JList<String> liste = new JList(themen);
+		liste.setBounds(20, 530, 200, 100);
+		
 		// JRadioButton
 		// JCheckBox
-		// JList
 		
 		// Elemente dem Hauptpanel hinzufuegen
 		panel.add(button);
@@ -60,6 +64,7 @@ public class Elemente {
 		panel.add(geheim);
 		panel.add(textArea);
 		panel.add(box);
+		panel.add(liste);
 		
 		// Hauptpanel dem JFrame hinzufuegen
 		fenster.add(panel);
