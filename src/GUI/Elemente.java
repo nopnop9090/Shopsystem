@@ -7,6 +7,8 @@ import java.awt.GraphicsEnvironment;
 import java.awt.MouseInfo;
 import java.awt.Point;
 import java.awt.Rectangle;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.*;
 
@@ -72,6 +74,34 @@ public class Elemente {
 		ButtonGroup beruf = new ButtonGroup();
 		beruf.add(rb1);
 		beruf.add(rb2);
+		
+		
+		button.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String eingabe = text.getText();
+				System.out.println(eingabe);
+				
+				char[] passwort = geheim.getPassword();
+				System.out.println("Passwort: " + new String(passwort));
+				
+				String vielText = textArea.getText();
+				System.out.println(vielText);
+				
+				boolean checked = checkBox.isSelected();
+				if(checked) {
+					System.out.println("mit AGB einverstanden");
+				} else {
+					System.out.println("sorry, erst AGB akzeptieren");
+				}
+				
+				System.out.println(checkBox.isSelected() ? "AGB akzeptiert" : "geht nicht weiter");
+				
+			}
+			
+		});
+		
 		
 		// Elemente dem Hauptpanel hinzufuegen
 		panel.add(button);
