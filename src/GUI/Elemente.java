@@ -97,7 +97,14 @@ public class Elemente {
 				}
 				
 				System.out.println(checkBox.isSelected() ? "AGB akzeptiert" : "geht nicht weiter");
+
+				// nummer des ausgewaehlten eintrags:
+				int comboIndex = box.getSelectedIndex();
+				System.out.println(comboIndex);
 				
+				// text des ausgewaehlten eintrags
+				String comboText = box.getSelectedItem().toString();
+				System.out.println(comboText);
 			}
 			
 		});
