@@ -26,17 +26,21 @@ public class Elemente {
 		// JButton
 		JButton button = new JButton("Bitte klicken!");
 		// Position und Dimension festlegen (x, y, Breite, Hoehe)
-		button.setBounds(100, 20, 200, 200);
+		button.setBounds(20, 20, 200, 50);
+		
+		// JLabel
+		JLabel label = new JLabel("Hier steht Text");
+		label.setBounds(20, 80, 200, 50);
 		
 		// JTextField
 		// JTextArea
-		// JLabel
 		// JRadioButton
 		// JCheckBox
 		// JList
 		
 		// Elemente dem Hauptpanel hinzufuegen
 		panel.add(button);
+		panel.add(label);
 		
 		// Hauptpanel dem JFrame hinzufuegen
 		fenster.add(panel);
