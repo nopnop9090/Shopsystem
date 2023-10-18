@@ -8,6 +8,10 @@ import javax.swing.*;
 
 public class Flow {
 
+	public static void gibAus() {
+		System.out.println("Ich wurde geklickt!");
+	}
+	
 	public static void main(String[] args) {
 		JFrame frame = new JFrame("Flowlayout");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -43,7 +47,14 @@ public class Flow {
 				System.out.println("Button 2 wurde geklickt");
 			}
 		});
-		
+
+		b3.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				gibAus();
+			}
+		});
+
 		
 		
 		// reihenfolge des hinzufuegens beachten
