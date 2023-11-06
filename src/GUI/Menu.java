@@ -88,7 +88,8 @@ public class Menu implements ActionListener {
 		}
 
 		if(e.getActionCommand().equalsIgnoreCase("beenden")) {
-			System.out.println("Raus!");
+			System.out.println("Goodbye!");
+			System.exit(0);
 		}
 	}
 
