@@ -50,7 +50,18 @@ public class Grid implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+		
+		if (e.getSource() == btn1) {
+			System.out.println("Button 1 geklickt");
+		} 
+
+		if (e.getSource() == btn2) {
+			System.out.println("Button 2 geklickt");
+		} 
+
+		
+		// Buttonbeschriftung nehmen:
+		System.out.println(((JButton)e.getSource()).getText()  + " geklickt" );
 		
 	}
 }
