@@ -1,6 +1,7 @@
 package GUI;
 
 import java.awt.BorderLayout;
+import java.awt.FlowLayout;
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
@@ -11,16 +12,22 @@ public class MixLayout {
 	
 	JFrame frame = new JFrame("Beispiel Gemischtes Layout");
 	JButton btnNorden 	= new JButton("Norden");
-	JButton btnSueden 	= new JButton("Süden");
+	//JButton btnSueden 	= new JButton("Süden");
 	JButton btnOsten 	= new JButton("Osten");
 	JButton btnWesten 	= new JButton("Westen");
 	//JButton btnMitte 	= new JButton("Zentrum");
 	JPanel pnCenter = new JPanel();
-
+	JPanel pnSueden = new JPanel();
+	
 	JButton btn1 = new JButton("Button 1");
 	JButton btn2 = new JButton("Button 2");
 	JButton btn3 = new JButton("Button 3");
 	JButton btn4 = new JButton("Button 4");
+
+	JButton btn5 = new JButton("Button 5");
+	JButton btn6 = new JButton("Button 6");
+	JButton btn7 = new JButton("Button 7");
+
 	
 
 	public MixLayout() {
@@ -35,13 +42,19 @@ public class MixLayout {
 		pnCenter.add(btn2);
 		pnCenter.add(btn3);
 		pnCenter.add(btn4);
-			
-		frame.add(btnNorden, BorderLayout.NORTH);
-		frame.add(btnSueden, BorderLayout.SOUTH);
-		frame.add(btnOsten, BorderLayout.EAST);
-		frame.add(btnWesten, BorderLayout.WEST);
 		
 		frame.add(pnCenter, BorderLayout.CENTER);
+
+		pnSueden.setLayout(new FlowLayout());
+		pnSueden.add(btn5);
+		pnSueden.add(btn6);
+		pnSueden.add(btn7);
+		
+		frame.add(pnSueden, BorderLayout.SOUTH);
+
+		frame.add(btnNorden, BorderLayout.NORTH);
+		frame.add(btnOsten, BorderLayout.EAST);
+		frame.add(btnWesten, BorderLayout.WEST);
 		
 		frame.setSize(600, 600);
 		frame.setLocationRelativeTo(null);		
