@@ -7,21 +7,20 @@ import javax.swing.JFrame;
 
 public class Border {
 	
+	JFrame frame = new JFrame("Beispiel BroderLayout");
+	JButton btnNorden 	= new JButton("Norden");
+	JButton btnSueden 	= new JButton("Süden");
+	JButton btnOsten 	= new JButton("Osten");
+	JButton btnWesten 	= new JButton("Westen");
+	JButton btnMitte 	= new JButton("Zentrum");
 	
 
-	public static void main(String[] args) {
-		JFrame frame = new JFrame("Beispiel BroderLayout");
+	public Border() {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-		JButton btnNorden 	= new JButton("Norden");
-		JButton btnSueden 	= new JButton("Süden");
-		JButton btnOsten 	= new JButton("Osten");
-		JButton btnWesten 	= new JButton("Westen");
-		JButton btnMitte 	= new JButton("Zentrum");
 		
 		// nicht zwingend notwendig da JFrame das BorderLayout als standard nutzt:  
 		// frame.setLayout(new BorderLayout());
-		
+
 		frame.add(btnNorden, BorderLayout.NORTH);
 		frame.add(btnSueden, BorderLayout.SOUTH);
 		frame.add(btnOsten, BorderLayout.EAST);
@@ -31,6 +30,10 @@ public class Border {
 		frame.setSize(600, 600);
 		frame.setLocationRelativeTo(null);		
 		frame.setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new Border();
 	}
 
 }
