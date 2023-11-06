@@ -9,16 +9,17 @@ public class Grid {
 
 	// 3 Zeilen, 2 Spalten
 	JPanel panel = new JPanel(new GridLayout(3, 2));
-	
+
+	JButton btn1 = new JButton("Button 1");
+	JButton btn2 = new JButton("Button 2");
+	JButton btn3 = new JButton("Button 3");
+	JButton btn4 = new JButton("Button 4");
+	JButton btn5 = new JButton("Button 5");
+	JButton btn6 = new JButton("Button 6");
+
 	public Grid() {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		JButton btn1 = new JButton("Button 1");
-		JButton btn2 = new JButton("Button 2");
-		JButton btn3 = new JButton("Button 3");
-		JButton btn4 = new JButton("Button 4");
-		JButton btn5 = new JButton("Button 5");
-		JButton btn6 = new JButton("Button 6");
 		
 		btn1.addActionListener(this);
 		btn2.addActionListener(this);
