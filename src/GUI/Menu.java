@@ -25,7 +25,14 @@ public class Menu {
 		// 2. Eintrag zu Datei
 		mi = new JMenuItem("Speichern");
 		menu.add(mi);
+
+		// Trennlinie
+		menu.addSeparator();
 		
+		// 3. Eintrag zu Datei
+		mi = new JMenuItem("Beenden");
+		menu.add(mi);
+
 		menuBar.add(menu);
 		
 		frame.add(menuBar, BorderLayout.NORTH);
