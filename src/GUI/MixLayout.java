@@ -45,7 +45,7 @@ public class MixLayout {
 		
 		frame.add(pnCenter, BorderLayout.CENTER);
 
-		pnSueden.setLayout(new FlowLayout());
+		pnSueden.setLayout(new FlowLayout(FlowLayout.LEFT));
 		pnSueden.add(btn5);
 		pnSueden.add(btn6);
 		pnSueden.add(btn7);
