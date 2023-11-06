@@ -43,8 +43,15 @@ public class Menu {
 		menu = new JMenu("Artikel");
 		mi = new JMenuItem("Katzenkram");
 		menu.add(mi);
-		mi = new JMenuItem("Hundekram");
-		menu.add(mi);
+		
+		subMenu = new JMenu("Hundekram");
+		
+		mi = new JMenuItem("Knochen");
+		subMenu.add(mi);
+		mi = new JMenuItem("Spielzeug");
+		subMenu.add(mi);
+		
+		menu.add(subMenu);
 		
 		// 2. Eintrag "Artikel" der Menubar hinzufügen
 		menuBar.add(menu);
