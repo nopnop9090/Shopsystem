@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 
 public class MixLayout {
 	
-	JFrame frame = new JFrame("Beispiel Gemischtes Layout");
+	JFrame frame = new JFrame("Beispiel gemischte Layouts");
 	JButton btnNorden 	= new JButton("Norden");
 	//JButton btnSueden 	= new JButton("Süden");
 	JButton btnOsten 	= new JButton("Osten");
