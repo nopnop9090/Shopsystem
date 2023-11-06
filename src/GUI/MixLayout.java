@@ -28,7 +28,6 @@ public class MixLayout {
 	JButton btn6 = new JButton("Button 6");
 	JButton btn7 = new JButton("Button 7");
 
-	
 
 	public MixLayout() {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
