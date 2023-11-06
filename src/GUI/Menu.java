@@ -15,8 +15,15 @@ public class Menu {
 		JMenuItem mi;
 		JMenu subMenu;
 		
+		// 1. Eintrag in der Menubar
 		menu = new JMenu("Datei");
+
+		// 1. Eintrag zu Datei
 		mi = new JMenuItem("Neu");
+		menu.add(mi);
+		
+		// 2. Eintrag zu Datei
+		mi = new JMenuItem("Speichern");
 		menu.add(mi);
 		
 		menuBar.add(menu);
