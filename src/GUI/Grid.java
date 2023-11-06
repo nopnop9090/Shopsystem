@@ -1,9 +1,12 @@
 package GUI;
 
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 
-public class Grid {
+public class Grid implements ActionListener {
 
 	JFrame frame = new JFrame("Beispiel Grid");
 
@@ -43,5 +46,11 @@ public class Grid {
 
 	public static void main(String[] args) {
 		new Grid();
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }
