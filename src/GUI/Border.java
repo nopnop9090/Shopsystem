@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 
 public class Border {
 	
-	JFrame frame = new JFrame("Beispiel BroderLayout");
+	JFrame frame = new JFrame("Beispiel BorderLayout");
 	JButton btnNorden 	= new JButton("Norden");
 	JButton btnSueden 	= new JButton("Süden");
 	JButton btnOsten 	= new JButton("Osten");
