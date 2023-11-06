@@ -3,6 +3,7 @@ package GUI;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 
 import javax.swing.*;
 
@@ -14,20 +15,28 @@ public class Menu implements ActionListener {
 		
 		JMenu menu = new JMenu();
 		JMenuBar menuBar = new JMenuBar();
+		
 		JMenuItem mi;
 		JMenu subMenu;
+		
+		KeyStroke ks;
 		
 		// 1. Eintrag in der Menubar
 		menu = new JMenu("Datei");
 
 		// 1. Eintrag zu Datei
 		mi = new JMenuItem("Neu");
+		ks = KeyStroke.getKeyStroke(KeyEvent.VK_N, KeyEvent.CTRL_DOWN_MASK);
+		mi.setAccelerator(ks);
 		mi.setMnemonic('N');
 		mi.addActionListener(this);
+		
 		menu.add(mi);
 		
 		// 2. Eintrag zu Datei
 		mi = new JMenuItem("Speichern");
+		ks = KeyStroke.getKeyStroke(KeyEvent.VK_S, KeyEvent.CTRL_DOWN_MASK);
+		mi.setAccelerator(ks);
 		mi.setMnemonic('S');
 		mi.addActionListener(this);
 		menu.add(mi);
