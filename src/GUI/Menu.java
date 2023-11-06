@@ -19,15 +19,12 @@ public class Menu implements ActionListener {
 		JMenuItem mi;
 		JMenu subMenu;
 		
-		KeyStroke ks;
-		
 		// 1. Eintrag in der Menubar
 		menu = new JMenu("Datei");
 
 		// 1. Eintrag zu Datei
 		mi = new JMenuItem("Neu");
-		ks = KeyStroke.getKeyStroke(KeyEvent.VK_N, KeyEvent.CTRL_DOWN_MASK);
-		mi.setAccelerator(ks);
+		mi.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, KeyEvent.CTRL_DOWN_MASK));
 		mi.setMnemonic('N');
 		mi.addActionListener(this);
 		
@@ -35,8 +32,7 @@ public class Menu implements ActionListener {
 		
 		// 2. Eintrag zu Datei
 		mi = new JMenuItem("Speichern");
-		ks = KeyStroke.getKeyStroke(KeyEvent.VK_S, KeyEvent.CTRL_DOWN_MASK);
-		mi.setAccelerator(ks);
+		mi.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, KeyEvent.CTRL_DOWN_MASK));
 		mi.setMnemonic('S');
 		mi.addActionListener(this);
 		menu.add(mi);
